@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./signup.css"/>
+    <title>signup</title>
+</head>
+<body>
+    <form>
+        <h1>Signup Form</h1>
+        <fieldset>
+            <legend>personal info</legend>
+            <label for="first-name">First Name</label>
+            <input id="first-name" type="text" required/>
+            <label for="last-name">Last Name</label>
+            <input for="last-name" type="text" required/>
+            <label for="email">Email</label>
+            <input for="email" type="email" required/>
+            <label for="age">Age</label>
+            <input for="age" type="number"/>
+            <label for="picture">Profile Picture</label>
+            <input for="picture" type="file"/>
+        </fieldset>
+        <fieldset>
+            <legend>what do you want to learn</legend>
+            <label for="technology">I want to learn</label>
+            <select id="technology" required>
+                <option value="html">html</option>
+                <option value="css">css</option>
+                <option value="js">js</option>
+                <option value="jquery">jquery</option>
+                <option value="bootstrap">bootstrap</option>
+                <option value="react">react</option>
+            </select>
+            <label>learn by projects</label>
+            <input type="checkbox"/>
+        </fieldset>
+        <fieldset required>
+            <legend>preferences</legend>
+            <label class="title">exercise:</label>
+            <label for="w1-2">1-2 days a week</label>
+            <input id="w1-2" type="radio" name="exercise"/>
+            <label for="w3-4">3-4 days a week</label>
+            <input id="w3-4" type="radio" name="exercise"/>
+            <label for="w5-6">5-6 days a week</label>
+            <input id="w5-6" type="radio" name="exercise"/>
+            <label for="everyday">every day</label>
+            <input id="everyday" type="radio" name="exercise"/>
+        </fieldset>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
