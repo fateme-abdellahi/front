@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&display=swap" rel="stylesheet">
+
+    <title>bootstrap</title>
+</head>
+<body class="bg-dark">
+
+    <div class="container-fluid p-0">
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- NAVBAR -->
+
+        <nav id="navbar-p" class="navbar px-2 py-0 px-sm-3 px-lg-5 navbar-expand-lg fixed-top navbar-dark bg-dark border-bottom border-light opacity-75">
+            <div class="navbar-brand">
+                <a href="#" data-bs-toggle="tooltip" data-bs-title="www.indiatoday.in"><img src="./brand.jpg" class="rounded-circle navbar-img img-fluid" alt="an star" style="width:50px;height:50px;"/></a>
+                <!-- www.indiatoday.in-->
+            </div>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarToggleBody">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarToggleBody" class="collapse navbar-collapse">
+                <ul class="navbar-nav text-end w-100 me-3">
+                    <li class="nav-item ms-3">
+                        <a class="nav-link" href="#c-pictures">
+                            Pictures
+                        </a>
+                    </li>
+                    <li class="nav-item ms-auto">
+                        <a class="nav-link" href="#cards-container">
+                            Star Classes
+                        </a>
+                    </li>
+                    <li class="nav-item ms-auto">
+                        <a class="nav-link" href="#offcanvas-b">
+                            Pricing
+                        </a>
+                    </li>
+                    <li class="nav-item ms-auto d-flex align-items-center me-lg-5">
+                        <div class="dropstart pb-3 pb-lg-0">
+                            <a class="dropdown-toggle text-decoration-none" data-bs-toggle="dropdown">Contact
+                                <ul class="dropdown-menu me-2 ms-auto">
+                                    <a class="dropdown-item py-0" href="#" style="padding:10px"><img src="./gmail.png" width="41px" height="35px">fateme.abdellahii@gmail.com</a>
+                                    <a class="dropdown-item" href="https://www.linkedin.com/in/fateme-abdellahi-b21181221"><img src="./linkedIn.png" width="30px" height="29"></a>
+                                    <a class="dropdown-item" href="https://github.com/fateme-abdellahi" class="text-dark"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                      </svg></a>
+                                </ul>
+                            </a>
+                        </div>
+                    </li>
+            </div>
+        </nav>
+
+
+
+        <div class="container-lg mt-5 pt-4"  data-bs-spy="scroll" data-bs-target="#navbar-p" data-bs-smooth-scroll="true" tabindex="0">
+
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            <!-- ALERTS -->
+            
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </symbol>
+                <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                </symbol>
+                <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </symbol>
+            </svg>
+            <div class="alert alert-danger mb-1">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                this is only a bootstrap project, information provided here are not 100% reliable
+            </div>
+            <div class="alert alert-info">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+                if you hover over a picture you'll see the website address which the picture is copied from
+            </div>
+        
+            <div class="text-center text-capitalize text-light display-3 pt-5 pb-0" id="c-pictures-p">star types</div>
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            <!-- CAROUSEL -->
+            <div id="c-pictures" class="m-auto" style="max-width: 800px;">
+                <div class="carousel slide my-5" id="p-carousel" data-bs-ride="carousel">
+                
+                    <button type="button" class="carousel-control-prev" data-bs-target="#p-carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button type="button" class="carousel-control-next" data-bs-target="#p-carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-slide-to="0" data-bs-target="#p-carousel" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-slide-to="1" data-bs-target="#p-carousel"></button>
+                        <button type="button" data-bs-slide-to="2" data-bs-target="#p-carousel"></button>
+                        <button type="button" data-bs-slide-to="3" data-bs-target="#p-carousel"></button>
+                    </div>
+                
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <a href="#" data-bs-toggle="tooltip" data-bs-title="www.space.com"><img class="img-fluid" src="./neutron-star.jpg" alt="neutron star" style="height:450px;width:100%"></a>
+                            <!-- www.space.com -->
+                            <h2 class="carousel-caption">neutron star</h2>
+                        </div>
+                        
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <a href="#" data-bs-toggle="tooltip" data-bs-title="www.universemagazine.com"><img class="img-fluid" src="./red-giant.png" alt="red giant star" style="height:450px;width:100%"></a>
+                            <!-- www.universemagazine.com -->
+                            <h2 class="carousel-caption">red giant star</h2>
+                        </div>
+                        
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <a href="#" data-bs-toggle="tooltip" data-bs-title="www.moeara.com"><img class="img-fluid" src="./solar-type.png" alt="solar type star" style="height:450px;width:100%"></a>
+                            <!-- www.moeara.com -->
+                            <h2 class="carousel-caption">solar type star</h2>
+                        </div>
+                        
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <a href="#" data-bs-toggle="tooltip" data-bs-title="www.energynewsbulletin.net"><img class="img-fluid" src="./blue-star.png" alt="blue star" style="height:450px;width:100%"></a>
+                            <!-- www.energynewsbulletin.net -->
+                            <h2 class="carousel-caption">blue star</h2>
+                        </div>  
+                    </div>
+                </div> 
+            </div>
+            
+
+            <div class="text-center text-capitalize text-light display-3 pt-5 pb-0" id="cards-container-p">star classes</div>
+            
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------------             -->
+<!-- CARDS -->
+            <div id="cards-container" class="row h-vh-100 row-cols-1 gx-md-5 p-5 justify-content-evenly align-items-start align-content-center">
+
+                    <div class="col card p-0 border border-dark mb-5" style="width:250px">
+                        <div class="card-body p-0">
+                        <a href="#" data-bs-toggle="tooltip" data-bs-title="en.wikipedia.org"><img class="card-img-top rounded-0" src="./zeta_ophiuchi.png" style="height:220px;cursor: not-allowed;"/></a>
+                        <!-- en.wikipedia.org -->
+                            <div class="accordion">
+                                <div class="accordion-header">
+                                    <button class="accordion-button text-dark" data-bs-toggle="collapse" data-bs-target="#classOBody">class O</button>
+                                </div>
+                                <div class="accordion-collapse collapse" id="classOBody" data-bs-parent="#cards-container">
+                                    <div class="accordion-body">temperatur: 33,000 K or more</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col card p-0 border border-dark mb-5" style="width:250px">
+                        <a href="#" data-bs-toggle="tooltip" data-bs-title="en.wikipedia.org"><img class="card-img-top rounded-0" src="./rigel.png" style="height:220px;cursor: not-allowed;"/></a>
+                        <!-- en.wikipedia.org -->
+                        <div class="card-body p-0">
+                            <div class="accordion">
+                                <div class="accordion-header">
+                                    <button class="accordion-button text-dark" data-bs-toggle="collapse" data-bs-target="#classBBody">class B</button>
+                                </div>
+                                <div class="accordion-collapse collapse" id="classBBody" data-bs-parent="#cards-container">
+                                    <div class="accordion-body">temperatur: 10,500-30,000 K</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-100 d-lg-none"></div>
+
+                <div class="col card p-0 border border-dark mb-5" style="width:250px">
+                    <a href="#" data-bs-toggle="tooltip" data-bs-title="en.wikipedia.org"><img class="card-img-top rounded-0" src="./altair.jpg" style="height:220px;cursor: not-allowed;"/></a>
+                    <!-- en.wikipedia.org -->
+                    <div class="card-body p-0">
+                        <div class="accordion">
+                            <div class="accordion-header">
+                                <button class="accordion-button text-dark" data-bs-toggle="collapse" data-bs-target="#classABody">class A</button>
+                            </div>
+                            <div class="accordion-collapse collapse" id="classABody" data-bs-parent="#cards-container">
+                                <div class="accordion-body">temperatur: 7,500-10,000 K</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col card p-0 border border-dark mb-5" style="width:250px">
+                    <a href="#" data-bs-toggle="tooltip" data-bs-title="en.wikipedia.org"><img class="card-img-top rounded-0" src="./procyon.jpg" style="height:220px;cursor: not-allowed;"/></a>
+                    <a href="#" data-bs-toggle="tooltip" data-bs-title="en.wikipedia.org"></a><!-- en.wikipedia.org -->
+                    <div class="card-body p-0">
+                        <div class="accordion">
+                            <div class="accordion-header">
+                                <button class="accordion-button text-dark" data-bs-toggle="collapse" data-bs-target="#classFBody">class F</button>
+                            </div>
+                            <div class="accordion-collapse collapse" id="classFBody" data-bs-parent="#cards-container">
+                                <div class="accordion-body">temperatur: 6,000-7,200 K</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="w-100 d-lg-none"></div>
+
+
+                <div class="col card p-0 border border-dark mb-5" style="width:250px">
+                    <a href="#" data-bs-toggle="tooltip" data-bs-title="en.wikipedia.org"><img class="card-img-top rounded-0" src="./sun.jpg" style="height:220px;cursor: not-allowed;"/></a>
+                    <!-- en.wikipedia.org -->
+                    <div class="card-body p-0">
+                        <div class="accordion">
+                            <div class="accordion-header">
+                                <button class="accordion-button text-dark" data-bs-toggle="collapse" data-bs-target="#classGBody">class G</button>
+                            </div>
+                            <div class="accordion-collapse collapse" id="classGBody" data-bs-parent="#cards-container">
+                                <div class="accordion-body">temperatur: 5,500-6,000 K</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col card p-0 border border-dark mb-5" style="width:250px">
+                    <a href="#" data-bs-toggle="tooltip" data-bs-title="en.wikipedia.org"><img class="card-img-top rounded-0" src="./epsilon_indi.jpg" style="height:220px;cursor: not-allowed;"/></a>
+                    <!-- en.wikipedia.org -->
+                    <div class="card-body p-0">
+                        <div class="accordion">
+                            <div class="accordion-header">
+                                <button class="accordion-button text-dark" data-bs-toggle="collapse" data-bs-target="#classKBody">class K</button>
+                            </div>
+                            <div class="accordion-collapse collapse" id="classKBody" data-bs-parent="#cards-container">
+                                <div class="accordion-body">temperatur: 4,000-5,250 K</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100 d-lg-none"></div>
+
+                <div class="col card p-0 border border-dark mb-5" style="width:250px">
+                    <a href="#" data-bs-toggle="tooltip" data-bs-title="en.wikipedia.org"><img class="card-img-top rounded-0" src="./proxima_centauri.jpg" style="height:220px;cursor: not-allowed;"/></a>
+                    <!-- en.wikipedia.org -->
+                    <div class="card-body p-0">
+                        <div class="accordion">
+                            <div class="accordion-header">
+                                <button class="accordion-button text-dark" data-bs-toggle="collapse" data-bs-target="#classMBody">class M</button>
+                            </div>
+                            <div class="accordion-collapse collapse" id="classMBody" data-bs-parent="#cards-container">
+                                <div class="accordion-body">temperatur: 2,600-3,850 K</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col card p-0 border border-dark mb-5 rounded-0 rounded-bottom" style="width:250px">
+                    <div style="height:220px" class="row p-3 justify-content-center">
+                        <div class="small col-12 text-primary"><b>sorry! our servers are a little slow. this card is still loading...</b></div>
+                        <div class="col-12 spinner-border text-success" role="status"></div>
+                        <div class="col-12 small text-primary"><b>maybe forever :)</b></div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="accordion">
+                                <button class="accordion-button placeholder-glow" data-bs-toggle="collapse" data-bs-target="#loadingCard"><span class="placeholder col-5 bg-dark"></span></button>
+                            <div class="accordion-collapse collapse" id="loadingCard" data-bs-parent="#cards-container">
+                                <div class="accordion-body placeholder-glow">
+                                    <span class="placeholder col-9 bg-dark"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------                 -->
+<!-- MODAL AND TABLE -->
+
+
+
+                <button class="btn btn-warning w-75 text-capitalize mb-5" data-bs-toggle="modal" data-bs-target="#p-modal">see tabular info</button>
+                <div id="p-modal" class="modal fade">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <!-- <div class="modal-content"> -->
+                            <!-- <div class="modal-header text-capitalize">
+                                <div class="modal-title">tabular info</div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div> -->
+                            <!-- <div class="modal-body"> -->
+
+                                <table class="table table-responcive table-warning table-bordered table-striped table-hover text-center">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Class</th>
+                                            <th scope="col">Temperature</th>
+                                            <th scope="col">Sample star</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">O</th>
+                                            <td>33,000 K or more</td>
+                                            <td>Zeta Ophiuchi</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">B</th>
+                                            <td>10,500-30,000 K</td>
+                                            <td>Rigel</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">A</th>
+                                            <td>7,500-10,000 K</td>
+                                            <td>Altair</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">F</th>
+                                            <td>6,000-7,200 K</td>
+                                            <td>Procyon A</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">G</th>
+                                            <td>5,500-6,000 K</td>
+                                            <td>Sun</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">K</th>
+                                            <td>4,000-5,250 K</td>
+                                            <td>Epsilon Indi</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">M</th>
+                                            <td>2,600-3,850 K</td>
+                                            <td>Proxima Centauri</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </div>
+
+
+
+            </div>  
+                
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------             -->
+<!-- FORM -->
+
+
+            <div class="text-center text-capitalize text-light display-3 pt-5 pb-0" data-bs-spy="scroll" data-bs-target="#navbar-p" id="form-p">Pricing</div>
+
+            <button id="offcanvas-b" class="btn btn-danger my-5 w-75" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-p">Buy</button>
+
+            <div id="offcanvas-p" class="offcanvas bg-primary opacity-75 offcanvas-end" data-bs-scroll="true">
+                <div class="offcanvas-header">
+                    <div class="offcanvas-title text-center display-6">
+                        bootstrap form
+                    </div>
+                    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form class="needs-validation bg-success text-light p-3">
+                        <div>
+                        <label class="form-label">your full name</label>
+                        <input type="text" class="form-control mb-3" required>
+                    </div>
+                        <label class="form-label">email</label>
+                        <input type="email" class="form-control mb-3" required>
+                        <label class="form-label">I want to buy a:</label>
+                        <div class="form-check">
+                            <label class="form-check-label" for="m1">Galaxy</label>
+                            <input type="radio" id="m1" name="universe-part" class="form-check-input" required>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="m2">Galaxy Cluster</label>
+                            <input type="radio" id="m2" name="universe-part" class="form-check-input">
+                        </div>
+                        <div class="form-check mb-3">
+                            <label class="form-check-label" for="m3">Universe</label>
+                            <input type="radio" id="m3" name="universe-part" class="form-check-input" checked>
+                        </div>
+                        <div class="form-check mb-3">
+                            <label class="form-check-label" for="p1">I'll pay in cash</label>
+                            <input type="checkbox" id="p1" name="pay-method" class="form-check-input" checked>
+                        </div>
+                        <label class="form-label">how much money are you going to spend?(in 100 Trillion USD)</label>
+                        <input type="range" class="form-range" min="1" max="10" step="1">
+                        <div class="d-flex flex-nowrap justify-content-between small mb-5">
+                            <span>1</span>
+                            <span class="ps-1">2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span class="ps-1">7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                        </div>
+                        <button type="button" class="btn btn-danger mb-3 w-100" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="really? :)">buy</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+
+
+
+        <!-- <div data-bs-spy="scroll" data-bs-target="#navbar-p" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+            <h4 id="scrollspyHeading1">First heading</h4>
+            <p>...</p>
+            <h4 id="scrollspyHeading2">Second heading</h4>
+            <p>...</p>
+            <h4 id="scrollspyHeading3">Third heading</h4>
+            <p>...</p>
+            <h4 id="scrollspyHeading4">Fourth heading</h4>
+            <p>...</p>
+            <h4 id="scrollspyHeading5">Fifth heading</h4>
+            <p>...</p>
+          </div> -->
+
+
+        
+        
+        
+    </div>
+    
+    <footer class="text-light text-center p-5 border-top border-light">
+        <!-- <div class="row row-cols-1"> -->
+            <div class="mb-3">developer info:</div>
+            <div class="mb-5">
+                <a class="me-5" href="#" data-bs-title="fateme.abdellahii@gmail.com" data-bs-toggle="tooltip"><img src="./gmail.png" width="35px" height="30px"></a>
+                <a class="me-5" href="https://www.linkedin.com/in/fateme-abdellahi-b21181221/"><img src="./linkedIn.png" width="30px" height="29"></a>
+                <a class="text-light" href="https://github.com/fateme-abdellahi" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                  </svg></a>
+            </div>
+            <div class="small mt-3">
+                &copy; 2022 all rights reserved
+            </div>
+            <!-- <div class="row text-capitalize text-center">
+            </div> -->
+            
+        <!-- </div> -->
+    </footer>
+    
+    
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"
+    ></script>
+    <script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+
+    </script>
+</body>
+</html>
