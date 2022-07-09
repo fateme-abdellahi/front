@@ -8,6 +8,10 @@
     <title>signup</title>
 </head>
 <body>
+    <nav>
+        <a href="./clock.html">clock (css grid)</a>
+        <a href="./calculator.html">calculator (css flex)</a>
+    </nav>
     <form>
         <h1>Signup Form</h1>
         <fieldset>
@@ -48,7 +52,18 @@
             <input id="w5-6" type="radio" name="exercise"/>
             <label for="everyday">every day</label>
             <input id="everyday" type="radio" name="exercise"/>
+            <label class="title" for="hour">exercise per day (in hour):</label>
+            <input id="hour" type="range" min="0" max="24" step="4">
+            <div class="degree">
+                <span>1-4</span>
+                <span>5-8</span>
+                <span>9-12</span>
+                <span>13-16</span>
+                <span>17-20</span>
+                <span>21-24</span>
+            </div>
         </fieldset>
+        
         <button>Submit</button>
     </form>
 </body>

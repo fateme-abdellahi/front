@@ -126,6 +126,21 @@ body{
     animation: count 60s linear infinite;
 }
 
+nav{
+    background-color:rgb(205, 116, 44);
+    display:flex;
+    padding:10px;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    justify-content: space-around;
+}
+nav *{
+    color:white;
+    text-decoration: none;
+}
+
 @keyframes count{
     from{
         transform: rotate(-90deg);

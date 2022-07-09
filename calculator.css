@@ -7,7 +7,7 @@ html,body{
     margin: 0;
 }
 .container{
-    margin:15% auto;
+    margin:30% auto;
     padding:3%;
     height:50%;
     display: flex;
@@ -82,4 +82,19 @@ span{
 .row3 span:hover,.row4 span:hover,.row5 span:hover,.row6 span:hover{
     background-color:yellow !important;
     box-shadow: -5px -5px 10px rgb(181, 184, 8) inset,5px 5px 10px rgb(223, 232, 64) inset !important;
+}
+
+nav{
+    background-color:rgb(205, 116, 44);
+    display:flex;
+    padding:10px;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    justify-content: space-around;
+}
+nav *{
+    color:white;
+    text-decoration: none;
 }
