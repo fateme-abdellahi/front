@@ -1,0 +1,9 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+body{
+    font-family: 'Courgette', 'Nunito',sans-serif;
+}
+#copyright{
+    font-family:sans-serif
+}
