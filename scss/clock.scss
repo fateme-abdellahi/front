@@ -1,0 +1,124 @@
+@import 'justification';
+*{
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+body{
+    background-color: aqua;
+    overflow: hidden;
+    background-image:radial-gradient(circle,rgb(230, 35, 211),white);
+}
+.container{
+    position: relative;
+    background:rgb(211, 224, 26);
+    display:grid;
+    border: 30px solid red;
+    border-radius:50%;
+    width:350px;
+    height:350px;
+    margin: 25% auto;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr repeat(3,4fr) 1fr 1fr;
+    text-align: center;
+    padding:20px;
+    margin: 20vh auto;
+    box-shadow: 0 0 20px 2px inset;
+
+    transition:500ms ease-in-out;
+    &:hover{
+        border-color: rgb(132, 0, 255);
+        background-color: rgb(13, 143, 235);
+        color:white;
+    }
+    .hour{
+        position: absolute;
+        align-self:end;
+        width: 30%;
+        height:5px;
+        top: 50%;
+        left: 50%;
+        background-color: red;
+        border:none;
+        transform-origin: 0px;
+        animation: count 216000s linear infinite;
+    }
+    .minute{
+        position: absolute;
+        align-self:end;
+        width: 40%;
+        height:5px;
+        top: 50%;
+        left: 50%;
+        background-color: rgb(20, 222, 208);
+        border:none;
+        transform-origin: 0px;
+        animation: count 3600s linear infinite;
+    }
+    .second{
+        position: absolute;
+        align-self:end;
+        width: 45%;
+        height:5px;
+        top: 50%;
+        left: 50%;
+        background-color: rgb(12, 196, 9);
+        border:none;
+        transform-origin: 0px;
+        animation: count 60s steps(60,end) infinite;
+    }
+
+}
+
+
+@for $r from 1 through 7{
+    .r#{$r}{
+        grid-row: $r;
+        @if $r==3 or $r==4 or $r==5{
+            align-self:center;
+        }
+    }
+}
+
+@for $c from 0 through 2{
+    .i#{$c}{
+        @if $c==0{
+            grid-column:2;
+        }
+        @else if $c==2{
+            grid-column:1;
+        }
+        @else{
+            grid-column:3;
+        }
+    }
+}
+
+
+nav{
+    background-color:rgb(46, 5, 253);
+    display:flex;
+    padding:10px;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    justify-content: space-around;
+    a{
+        color:white;
+        text-decoration: none;
+    }
+}
+
+
+@keyframes count{
+    from{
+        transform: rotate(-90deg);
+    }
+    to{
+        transform: rotate(270deg);
+    }
+}

@@ -1,0 +1,38 @@
+$rn:2;
+$col:1;
+
+@while $rn<=7 and $col<=2{
+    @if $rn==3 or $rn==5{
+        .r#{$rn}.i1{
+            justify-self: center;
+            padding-left: 25px;
+        }
+        .r#{$rn}.i2{
+            justify-self: center;
+            padding-right: 25px;
+        }
+        $col:1;
+        $rn:$rn+1;
+    }
+    @else if $col==1{
+        .r#{$rn}.i1{
+            justify-self: start;
+        }
+        $col:$col+1;
+    }
+    @else{
+        .r#{$rn}.i2{
+            justify-self: end;
+        }
+        $rn:$rn+1;
+        $col:1;
+    }
+}
+
+
+.r4.i1{
+    justify-self: end;
+}
+.r4.i2{
+    justify-self: start;
+}
