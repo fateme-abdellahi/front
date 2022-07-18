@@ -1,0 +1,45 @@
+a{
+    text-decoration: inherit;
+    color:white;
+}
+a:hover{
+    font-weight: bold;
+}
+.card{
+    width:400px;
+    margin: 20px;
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow:clip
+}
+.card button{
+    width:100%;
+    padding: 15px;
+    background-color: rgb(255, 0, 208);
+    border:none;
+    color:white;
+    font-size:25px;
+}
+.card>div{
+    background-color: rgb(233, 143, 203);
+    margin: auto;
+    width:100%;
+    height:300px;
+    display: none;
+}
+
+body>button{
+    display:block;
+    border:none;
+    padding: 10px;
+    width:70%;
+    background-color: rgb(255, 217, 0);
+    border-radius:3px;
+    margin:100px auto 0 auto;
+}
+
+button:hover{
+    filter:brightness(1.1)
+}
